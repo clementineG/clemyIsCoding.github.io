@@ -37,6 +37,14 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
+
+            <img
+              src={"/profile.jpg"}
+              className={utilStyles.borderCircle}
+              height={144}
+              width={144}
+              alt="clementine profile picture"
+            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
