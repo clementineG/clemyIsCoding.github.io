@@ -31,6 +31,7 @@ export default function Layout({ children, home }) {
             <Image
               src={"/profile.jpg"}
               overrideSrc={"/profile.jpg"}
+              unoptimized={true}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -43,7 +44,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 src={"/profile.jpg"}
-              overrideSrc={"/profile.jpg"}
+                unoptimized={true}
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108} 
