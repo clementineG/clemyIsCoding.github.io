@@ -4,7 +4,9 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Hello ! Bienvenue ! Egun On ! Benvengut !';
+const nameLine1 = 'Hello ! Bienvenue !';
+const nameLine2 = 'Egun On ! Benvengut !';
+
 export const siteTitle = 'Clemy is coding 🚀';
 
 export default function Layout({ children, home }) {
@@ -28,40 +30,30 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              src={"/profile.jpg"}
-              overrideSrc={"/profile.jpg"}
-              unoptimized={true}
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-
             <img
-              src={"/profile.jpg"}
+              src="/profile.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt="clementine profile picture"
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{nameLine1}<br/>{nameLine2}</h1>
           </>
         ) : (
           <>
             <Link href="/">
-              <Image
-                src={"/profile.jpg"}
-                unoptimized={true}
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108} 
-                alt=""
-              />
+            <img
+              src="/profile.jpg"
+              className={utilStyles.borderCircle}
+              height={144}
+              width={144}
+              alt="clementine profile picture"
+            />
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
-                {name}
+                <div >{nameLine1} </div>
+                {nameLine2}
               </Link>
             </h2>
           </>
