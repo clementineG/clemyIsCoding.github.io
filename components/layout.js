@@ -4,6 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+import profilePicture from "../public/profile.jpg"
+
 const nameLine1 = 'Hello ! Bienvenue !';
 const nameLine2 = 'Egun On ! Benvengut !';
 
@@ -31,8 +33,7 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
           <Image
-            src="/profile.jpg"
-            overrideSrc='/profile.jpg'
+            src={profilePicture}
             className={utilStyles.borderCircle}
             height={144}
             width={144}
