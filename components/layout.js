@@ -32,6 +32,7 @@ export default function Layout({ children, home }) {
           <>
           <Image
             src="/profile.jpg"
+            overrideSrc='/profile.jpg'
             className={utilStyles.borderCircle}
             height={144}
             width={144}
